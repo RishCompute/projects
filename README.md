@@ -35,7 +35,7 @@ import os
 corrector('pdf', r"C:\Users\risha\OneDrive\Desktop\test")
 
 # Rename JPG and PNG files
-corrector('jpg/png', r"C:\Users\risha\OneDrive\Desktop\test")` ``` `
+corrector('jpg/png', r"C:\Users\risha\OneDrive\Desktop\test")```
 
 
 
