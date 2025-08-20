@@ -1,54 +1,66 @@
-# Clutter Clearer 🧹
+# 🐍 Python Version Downloader
 
-**Clutter Clearer** is a simple Python script that helps you quickly rename and organize files in a directory by their format (extension).  
-It can rename all files or only those of specific formats, giving them clean, ordered names.
-
----
-
-## 📌 Features
-
-- Rename **all files** in a directory in order.
-- Rename **only specific file formats** (e.g., `.pdf`, `.jpg`, `.txt`).
-- Automatically appends the file extension twice to avoid accidental overwrites.
-- Handles `FileExistsError` gracefully with a friendly message.
+A simple Python script that **fetches all available Python versions** from [python.org](https://www.python.org/doc/versions/), lets you choose one, downloads it as a Windows installer (`.exe`), and optionally **executes the installer** directly from your terminal.
 
 ---
 
-## 📂 How It Works
-
-1. **`clutter_clearer(*format, directory_path)`**
-   - `format`: File extensions to target (e.g., `'pdf'`, `'jpg'`) or `"all"` to target all files.
-   - `directory_path`: Path to the folder containing the files.
-   
-2. **`corrector(arg, path)`**
-   - A helper function to make calling `clutter_clearer` easier.
-   - Splits a `/`-separated string of formats and sends them to `clutter_clearer`.
+## ✨ Features
+- 🔍 Fetches and displays **all available Python versions** from python.org.  
+- ⬇️ Downloads the selected version’s Windows installer (`.exe`) automatically.  
+- 📂 Allows you to choose a **custom download directory** (defaults to current directory).  
+- ⚡ Optionally **executes the installer** after download.  
 
 ---
 
-## 🖥 Example Usage
+## 📦 Requirements
+- Python **3.7+**
+- Dependencies:
+  - `requests`
+  - `beautifulsoup4`
 
-```python
-import os
-
-# Rename only PDF files in the given directory
-corrector('pdf', r"C:\Users\risha\OneDrive\Desktop\test")
-
-# Rename JPG and PNG files
-corrector('jpg/png', r"C:\Users\risha\OneDrive\Desktop\test")
+Install them with:
+```bash
+pip install requests beautifulsoup4
 ```
+🚀 Usage
+Clone or download this repository.
+```
+python python_downloader.py
+```
+Follow the prompts:
 
+- Choose whether to view available versions.
 
+- Enter the version to download (e.g. 3.8.0 or Python 3.8.0).
 
-⚠ Notes
-The script appends the extension twice intentionally to prevent overwriting files with the same name.
+- Select the download directory (press Enter for current directory).
 
-Make sure to run this script on a test directory first before using it on important files.
+- Optionally execute the downloaded .exe.
 
-If you run the same command twice on the same folder, you might trigger a FileExistsError.
+🖼 Example Run
+```
+Show available Python versions? [y/n]: y
 
-Windows users: Always put an r before the path string (e.g., r"C:\path\to\folder") to avoid escape sequence errors.
+Available Python versions (earliest to latest):
+---------------------------------------------
+ 1. Python 1.0.1
+ 2. Python 1.1
+ ...
+45. Python 3.13.0
 
+Enter the Python version to download (e.g., "3.8.0" or "Python 3.8.0"): 3.13.0
+Enter download directory (press Enter for current directory): 
 
-# Rename all files
-corrector('all', r"C:\Users\risha\OneDrive\Desktop\test")
+Downloading Python 3.13.0...
+Successfully downloaded Python 3.13.0 to: C:\Users\User\Downloads\python-3.13.0-amd64.exe
+
+Do you want to execute the file (y/n): y
+```
+⚠️ Notes
+
+- This script currently downloads Windows 64-bit installers only (-amd64.exe).
+
+- Make sure you run this script with proper permissions if saving to system directories.
+
+- Execution will open the official Python installer GUI.
+
