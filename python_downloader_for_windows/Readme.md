@@ -24,8 +24,9 @@ pip install requests beautifulsoup4
 ```
 🚀 Usage
 Clone or download this repository.
-
+```
 python python_downloader.py
+```
 Follow the prompts:
 
 Choose whether to view available versions.
