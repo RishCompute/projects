@@ -29,13 +29,13 @@ python python_downloader.py
 ```
 Follow the prompts:
 
-Choose whether to view available versions.
+- Choose whether to view available versions.
 
-Enter the version to download (e.g. 3.8.0 or Python 3.8.0).
+- Enter the version to download (e.g. 3.8.0 or Python 3.8.0).
 
-Select the download directory (press Enter for current directory).
+- Select the download directory (press Enter for current directory).
 
-Optionally execute the downloaded .exe.
+- Optionally execute the downloaded .exe.
 
 🖼 Example Run
 ```
@@ -57,9 +57,10 @@ Successfully downloaded Python 3.13.0 to: C:\Users\User\Downloads\python-3.13.0-
 Do you want to execute the file (y/n): y
 ```
 ⚠️ Notes
-This script currently downloads Windows 64-bit installers only (-amd64.exe).
 
-Make sure you run this script with proper permissions if saving to system directories.
+- This script currently downloads Windows 64-bit installers only (-amd64.exe).
 
-Execution will open the official Python installer GUI.
+- Make sure you run this script with proper permissions if saving to system directories.
+
+- Execution will open the official Python installer GUI.
 
