@@ -49,7 +49,7 @@ Available Python versions (earliest to latest):
 45. Python 3.13.0
 
 Enter the Python version to download (e.g., "3.8.0" or "Python 3.8.0"): 3.13.0
-Enter download directory (press Enter for current directory): C:\Users\your name\OneDrive\Desktop\test 
+Enter download directory (press Enter for current directory): C:\Users\User\Downloads
 
 Downloading Python 3.13.0...
 Successfully downloaded Python 3.13.0 to: C:\Users\User\Downloads\python-3.13.0-amd64.exe
