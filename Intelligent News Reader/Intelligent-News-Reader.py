@@ -121,7 +121,13 @@ def narrate_news_articles(news_data):
                 narration_text += article['description']
                 
             print(f"\nNarrating article {index} of {len(news_data['articles'])}...")
-            pyttsx3.speak(narration_text)
+            pyttsx3.speak(narration_text) # <--L1
+            #for mac-users if narration doesn't work and delete L1 
+            # tts_engine = pyttsx3.init()
+            # tts_engine.setProperty('rate', 160)
+            # tts_engine.setProperty('volume', 0.9)
+            # tts_engine.say(narration_text)
+            # tts_engine.runAndWait
 
     except KeyboardInterrupt:
         print("\nNews narration stopped by user.")
